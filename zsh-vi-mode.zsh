@@ -382,7 +382,8 @@ function zvm_define_widget() {
     local called=false
     [[ "$rawcode" == *"\$rawfunc"* ]] && { called=true }
 
-    eval "$wrapper() { zvm_widget_wrapper $rawfunc $func $called \"\$@\" }"
+    # eval "$wrapper() { zvm_widget_wrapper $rawfunc $func $called \"\$@\" }"
+    eval "$wrapper() { zvm_widget_wrapper '$rawfunc' '$func' '$called' \"\$@\" }"
     func=$wrapper
   fi
 
