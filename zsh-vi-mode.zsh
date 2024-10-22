@@ -3184,7 +3184,7 @@ function zvm_set_cursor() {
     return
   fi
 
-  echo -ne "$1"
+  print -n "$1"
 }
 
 # Get the escape sequence of cursor style
